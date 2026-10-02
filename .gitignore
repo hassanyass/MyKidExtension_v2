@@ -1,0 +1,92 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+*.whl
+.eggs/
+
+# Virtual Environment
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Models (large binary files)
+*.onnx
+*.onnx.data
+*.pt
+*.pth
+*.tflite
+*.bin
+models/*.onnx
+models/*.pt
+models/*.pth
+models/*.tflite
+models/*.bin
+!models/.gitkeep
+
+# Test outputs
+test-output/
+*.mp4
+*.webm
+!test-data/**/*.mp4
+!test-data/**/*.webm
+
+# Logs
+*.log
+logs/
+
+# Environment
+.env
+.env.local
+
+# Coverage
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+
+# Node (for browser extension)
+node_modules/
+package-lock.json
+
+# Browser extension: vendored runtime + model copy.
+# Regenerate both via `node apps/extension/scripts/setup.js`.
+apps/extension/vendor/
+apps/extension/models/*.onnx
+!apps/extension/models/.gitkeep
+# Sample images copied into devtest are AGPL and regenerable; the test
+# harness alongside them is ours and is kept.
+apps/extension/devtest/*.jpg
+apps/extension/devtest/*.png
+apps/extension/devtest/*.inlined.html
+
+# Detection sample images (AGPL-3.0, bundled with the ultralytics package —
+# not ours to redistribute). Regenerate via:
+#   python scripts/fetch_detection_samples.py
+test-data/images/detection-samples/
+
+# Phase A candidate models — downloaded, not authored here.
+# Regenerate via: python scripts/benchmark_safety_models.py
+models/candidates/
+
+# Distribution
+*.tar.gz
+*.zip
